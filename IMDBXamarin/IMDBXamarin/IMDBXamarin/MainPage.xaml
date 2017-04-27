@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IMDBXamarin"
+             x:Class="IMDBXamarin.MainPage">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="5,20,20,5">
+            <Label Text="Busca:"></Label>
+            <SearchBar x:Name="busca" Placeholder="Digite aqui o nome do filme." FontSize="Small" ></SearchBar>
+            <StackLayout x:Name="stkAguarde" IsVisible="False">
+                <ActivityIndicator x:Name="indicator" IsVisible="False"></ActivityIndicator>
+                <Label Text="Aguarde" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+            <ListView x:Name="lista" Margin="10"  SeparatorVisibility="Default" IsVisible="False" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"  VerticalOptions="Center">
+                                <Image Source="{Binding Poster}" Aspect="AspectFill" WidthRequest="80" HeightRequest="50"></Image>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Titulo:" FontAttributes="Bold" HorizontalTextAlignment="Start"></Label>
+                                        <Label Text="{Binding Title}" HorizontalTextAlignment="Start"></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Ano:" FontAttributes="Bold" HorizontalTextAlignment="Start"></Label>
+                                        <Label Text="{Binding Year}" TextColor="{Binding Cor}" HorizontalTextAlignment="Start"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
