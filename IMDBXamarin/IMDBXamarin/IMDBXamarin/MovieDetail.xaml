@@ -6,15 +6,15 @@
              >
     <StackLayout>
         <StackLayout HorizontalOptions="Center" Padding="10,40,10,10">
-            <Image x:Name="imgFilme" Aspect="AspectFit" Source="https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5ODczNDEwMl5BMl5BanBnXkFtZTcwMTQ4MzQyMQ@@._V1_SX300.jpg" ></Image>
+            <Image x:Name="imgFilme" Aspect="Fill" WidthRequest="240" HeightRequest="240"  ></Image>
         </StackLayout>
         <StackLayout Orientation="Horizontal" Padding="30,10,30,10">
             <Label Text="Titulo:" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
             <Label x:Name="lblTitulo" Text="A Coisa"  HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
         </StackLayout>
         <StackLayout Orientation="Horizontal" Padding="30,10,30,10">
-            <Label Text="Ano:" FontAttributes="Bold"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-            <Label x:Name="lblAnoLancamento" Text="1997"  HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
+            <Label Text="Data:" FontAttributes="Bold"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <Label x:Name="lblAnoLancamento"   HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
         </StackLayout>
     </StackLayout>
 </ContentPage>

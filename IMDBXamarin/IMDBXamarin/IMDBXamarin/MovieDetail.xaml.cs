@@ -24,12 +24,10 @@ namespace IMDBXamarin
            
             imgFilme.Source = movie.Poster;
             lblTitulo.Text = movie.Title;
-            lblAnoLancamento.Text = movie.Year;
-            int Year = int.Parse(movie.Year);
-            if (Year == 2017)
-            {
-                lblAnoLancamento.TextColor = Color.Red;
-            }
+
+            lblAnoLancamento.Text =string.Format("{0:dd/MM/yyyy}", movie.Year);
+          
+           
             
         }
     }

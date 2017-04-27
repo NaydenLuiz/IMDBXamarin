@@ -8,23 +8,12 @@ namespace IMDBXamarin.Model
 {
    public class Movies
     {
-        private int id;
+      
         private string title;
-        private string year;
+        private DateTime year;
         private string poster;
-        private string cor;
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-
-            set
-            {
-                id = value;
-            }
-        }
+       
+      
 
         public string Title
         {
@@ -39,7 +28,7 @@ namespace IMDBXamarin.Model
             }
         }
 
-        public string Year
+        public DateTime Year
         {
             get
             {
@@ -65,17 +54,6 @@ namespace IMDBXamarin.Model
             }
         }
 
-        public string Cor
-        {
-            get
-            {
-                return cor;
-            }
-
-            set
-            {
-                cor = value;
-            }
-        }
+     
     }
 }
